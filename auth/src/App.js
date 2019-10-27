@@ -23,18 +23,24 @@ export default class App extends Component {
     switch (this.state.loggedIn) {
       case true:
         return (
-          <Button onPress={() => firebase.auth().signOut()}>Log Out</Button>
+          <View style={{flexDirection: 'row', marginTop: 10}}>
+            <Button onPress={() => firebase.auth().signOut()}>Log Out</Button>
+          </View>
         );
       case false:
         return <LoginForm />;
       default:
-        return <Spinner />;
+        return (
+          <View style={{flex: 1}}>
+            <Spinner />
+          </View>
+        );
     }
   }
 
   render() {
     return (
-      <View>
+      <View style={{flex: 1}}>
         <Header headerText="Authentication" />
         {this.renderContent()}
       </View>

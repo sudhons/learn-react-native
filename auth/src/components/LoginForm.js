@@ -29,7 +29,7 @@ export default class LoginForm extends Component {
 
   onLoginFail = () => {
     this.setState({error: 'Authentication Failed', isLoading: false});
-  }
+  };
 
   renderButton() {
     if (this.state.isLoading) {
