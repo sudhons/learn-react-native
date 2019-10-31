@@ -7,7 +7,7 @@ import EmployeeCreate from './components/EmployeeCreate';
 const RouterComponent = () => {
   return (
     <Router>
-      <Scene key="root" hideNavBar>
+      <Scene key="root" hideNavBar initial>
         <Scene key="auth">
           <Scene
             key="login"
@@ -16,7 +16,7 @@ const RouterComponent = () => {
             initial
           />
         </Scene>
-        <Scene key="main" initial>
+        <Scene key="main">
           <Scene
             rightTitle="Add"
             onRight={() => {
