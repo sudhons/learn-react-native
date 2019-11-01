@@ -5,7 +5,6 @@ import {createStore, applyMiddleware} from 'redux';
 import firease from 'firebase';
 import reducers from './reducers';
 import firebaseAuth from '../firebase-config';
-import LoginForm from './components/LoginForm';
 import Router from './Router';
 
 export default class App extends Component {
